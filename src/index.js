@@ -8,9 +8,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
     <Auth
-    domain={process.env.Domain}
-    clientId={process.env.Client_ID}
-    redirectUri={process.env.REDIRECT_URL}>
+    domain={process.env.REACT_APP_Domain}
+    clientId={process.env.REACT_APP_Client_ID}
+    redirectUri={process.env.REACT_APP_REDIRECT_URL}>
 
     <App />
     </Auth>
