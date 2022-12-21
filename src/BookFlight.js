@@ -64,13 +64,13 @@ class BookFlight extends React.Component {
             <>
                 <Form onSubmit={this.flightData}>
                     <Form.Label>Origin City</Form.Label>
-                    <Form.Control onInput={this.citySearch} type="text" name="city" placeholder="enter city" />
+                    <Form.Control onInput={this.citySearch} type="text" name="city" placeholder="Enter city" />
                     <Form.Label>Destination City</Form.Label>
-                    <Form.Control onInput={this.citySearch} type="text" name="city" placeholder="enter city" />
+                    <Form.Control onInput={this.citySearch} type="text" name="city" placeholder="Enter city" />
                     <Form.Label>Date</Form.Label>
-                    <Form.Control onInput={this.citySearch} type="text" name="date" placeholder="enter date" />
+                    <Form.Control onInput={this.citySearch} type="text" name="date" placeholder="Enter date" />
                     <Form.Label>Adults</Form.Label>
-                    <Form.Control onInput={this.citySearch} type="text" name="adults" placeholder="number of adults" />
+                    <Form.Control onInput={this.citySearch} type="text" name="adults" placeholder="Number of adults" />
                     <Button type="submit">Explore!</Button>
                 </Form>
             </>
