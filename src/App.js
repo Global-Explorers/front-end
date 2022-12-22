@@ -9,7 +9,7 @@ import { withAuth0 } from '@auth0/auth0-react';
 import AuthButtons from './auth/AuthButtons';
 import axios from 'axios';
 import React from 'react';
-
+import './style.css';
 
 
 class App extends React.Component {
