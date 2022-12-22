@@ -31,3 +31,10 @@ color: gold;
 #authButt{
     font-family: 'Kanit', sans-serif;  
 }
+
+
+body, html{
+    background-image: url(../public/img/plane.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
