@@ -3,10 +3,10 @@ import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import AllFlights from './AllFlights';
-import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import InfoFlight from './InfoFlight';
 
 class BookFlight extends React.Component {
     constructor() {
@@ -111,7 +111,8 @@ class BookFlight extends React.Component {
                     </Form>
 
                 </Container>
-                <AllFlights flights={this.state.flights} />
+                {/* <AllFlights flights={this.state.flights} /> */}
+                <InfoFlight flights={this.state.flights}/>
 
             </>
         )

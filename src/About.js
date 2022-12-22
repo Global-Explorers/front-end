@@ -1,10 +1,12 @@
-import { Component } from "react";
+// import { Component } from "react";
 
-class Profile extends Component {
+// class Profile extends Component {
 
-    render() {
-        return <p></p>
-    }
-};
+//     render() {
+//         <ul>
+//             {People.map(person => (
+//         return <p></p>
+//     }
+// };
 
-export default Profile;
+// export default Profile;
