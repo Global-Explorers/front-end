@@ -4,7 +4,7 @@ import React from 'react';
 class Footer extends React.Component {
   render() {
     return (
-     <div>
+     <div id='footer'>
         <footer>&copy; Sharmarke, Robert, Ryan</footer>
      </div>
     )
