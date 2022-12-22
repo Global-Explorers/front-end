@@ -13,7 +13,7 @@ function LogoutButton() {
   }
 
   return isAuthenticated &&
-      <button onClick={handleLogout}>Sign out</button>
+    <button id='authButt' onClick={handleLogout}>Sign out</button>
     ;
 }
 

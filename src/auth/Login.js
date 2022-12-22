@@ -13,7 +13,7 @@ function Login() {
   }
 
   return ! isAuthenticated &&
-    <button onClick={handleLogin}>Log in</button>
+    <button id='authButt' onClick={handleLogin}>Log in</button>
   ;
 }
 export default Login;
