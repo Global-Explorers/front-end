@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import AllFlights from './AllFlights';
 
 class BookFlight extends React.Component {
     constructor() {
@@ -12,12 +13,16 @@ class BookFlight extends React.Component {
             updateFlight: null,
             isModalShown: false,
             showUpdateModal: false,
-            cityName: ''
+            originLocationCode: '',
+            destinationLocationCode: '',
+            departureDate: '',
+            adults: '',
+            itineraries: '' 
         }
     }
     componentDidMount = () => {
         // fetch flight data
-        this.flightData();
+        // this.flightData();
     }
     showModal = () => {
         this.setState({
@@ -29,9 +34,24 @@ class BookFlight extends React.Component {
             isModalShown: false,
         })
     }
-    citySearch = (e) => {
+    UpdateOriginCity = (e) => {
         this.setState({
-          cityName: e.target.value
+            originLocationCode: e.target.value
+        })
+      }
+    UpdateDestinationCity = (e) => {
+        this.setState({
+            destinationLocationCode: e.target.value
+        })
+      }
+      UpdateDeparture = (e) => {
+        this.setState({
+            departureDate: e.target.value
+        })
+      }
+      NumberOfAdults = (e) => {
+        this.setState({
+            adults: e.target.value
         })
       }
 
@@ -44,36 +64,40 @@ class BookFlight extends React.Component {
     //       },
     //       headers: {
     //         'Authorization': `Bearer ${API_KEY}`
-// })
 
 
-    flightData = async () => {
+
+    flightData = async (e) => {
+        e.preventDefault()
         try {
             console.log('getting flights')
-            let flightData = await axios.get(`${process.env.REACT_APP_SERVER}/flight?city=${this.state.cityName}`);
-            console.log(flightData)
+            let flightData = await axios.get(`${process.env.REACT_APP_SERVER}/flight?originLocationCode=${this.state.originLocationCode}&destinationLocationCode=${this.state.destinationLocationCode}&departureDate=${this.state.departureDate}&adults=${this.state.adults}`);
+            console.log('testing')
+            let shortenFlightArray = flightData.data.slice(0,3)
             this.setState({
-                // flights: flightData.data
+                flights: shortenFlightArray
             })
         } catch (err) {
             console.log('Error has occured', err);
         }
     }
     render() {
+        console.log(this.state.flights);
         return (
             <>
                 <Form onSubmit={this.flightData}>
                     <Form.Label>Origin City</Form.Label>
-                    <Form.Control onInput={this.citySearch} type="text" name="city" placeholder="Enter city" />
+                    <Form.Control onInput={this.UpdateOriginCity} type="text" name="origin" placeholder="Enter origin code" />
                     <Form.Label>Destination City</Form.Label>
-                    <Form.Control onInput={this.citySearch} type="text" name="city" placeholder="Enter city" />
+                    <Form.Control onInput={this.UpdateDestinationCity} type="text" name="destination" placeholder="Enter destination code" />
                     <Form.Label>Date</Form.Label>
-                    <Form.Control onInput={this.citySearch} type="text" name="date" placeholder="Enter date" />
+                    <Form.Control onInput={this.UpdateDeparture} type="text" name="date" placeholder="Enter date" />
                     <Form.Label>Adults</Form.Label>
-                    <Form.Control onInput={this.citySearch} type="text" name="adults" placeholder="Number of adults" />
+                    <Form.Control onInput={this.NumberOfAdults} type="text" name="adults" placeholder="Number of adults" />
                     <Button type="submit">Explore!</Button>
                 </Form>
-            </>
+                <AllFlights flights = {this.state.flights} />
+                            </>
         )
     }
 }

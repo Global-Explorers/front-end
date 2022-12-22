@@ -21,7 +21,7 @@ class App extends React.Component {
 
     let request = {
       method: 'GET',
-      url: 'http://localhost:3002/flight',
+      url: 'http://localhost:3000/flight',
       headers: {
         'Authorization': `Bearer ${token}`
       }
