@@ -38,3 +38,19 @@ body, html{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+#searchLable{
+    color: black;
+    -webkit-text-stroke: .5px gold;
+font-size: ;
+}
+
+/* #root{
+outline-style: solid;
+border: 2px solid yellow;
+} */
+
+.nav {
+    outline-style: solid;
+border: 2px solid yellow;
+}

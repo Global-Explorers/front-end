@@ -36,7 +36,7 @@ class App extends React.Component {
     return (
       <>
         <BrowserRouter>
-          <Header request={this.request} />
+          <Header id='header' request={this.request} />
           {/* <AuthButtons /> */}
           {/* {this.props.auth0.isAuthenticated ? <button onClick={this.request}>Make request</button> : null} */}
           <Routes>
