@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 
 class InfoFlight extends React.Component {
 
@@ -28,6 +29,7 @@ class InfoFlight extends React.Component {
                                         <p>Cabin Type: {flight.travelerPricings[0].fareDetailsBySegment[0].cabin}</p>
                                         <p>Airline: {flight.validatingAirlineCodes}</p>
                                     </Card.Body>
+                                    <Button variant="primary">Book Flight</Button>
                                 </Card>
 
                     </Col>
