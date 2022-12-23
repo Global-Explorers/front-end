@@ -15,7 +15,7 @@ class Header extends React.Component {
         <NavItem id='link'><Link to="/about" className="nav-link">About</Link>
         </NavItem>
         <AuthButtons />
-        {this.props.auth0.isAuthenticated ? <button  onClick={this.request}>Make request</button> : null}
+        {this.props.auth0.isAuthenticated ? <button  onClick={this.request}></button> : null}
       </Navbar>
     )
   }
