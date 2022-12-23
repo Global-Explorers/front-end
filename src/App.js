@@ -1,9 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './Header'
 import Footer from './Footer'
 import BookFlight from './BookFlight';
-import { BrowserRouter, Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Profile from './About'
 import { withAuth0 } from '@auth0/auth0-react';
 // import AuthButtons from './auth/AuthButtons';
