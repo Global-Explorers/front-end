@@ -93,20 +93,20 @@ class BookFlight extends React.Component {
         console.log(this.state.flights);
         return (
             <>
-            
+
                 <Container>
 
                     <Form onSubmit={this.flightData}>
-                        <Row>
-                            <Col><Form.Label id='searchLable'>Origin City</Form.Label>  </Col>
-                            <Col>  <Form.Control onInput={this.UpdateOriginCity} type="text" name="origin" placeholder="Enter origin code" /></Col>
-                            <Col> <Form.Label id='searchLable'>Destination City</Form.Label>  </Col>
-                            <Col>  <Form.Control onInput={this.UpdateDestinationCity} type="text" name="destination" placeholder="Enter destination code" /></Col>
-                            <Col> <Form.Label id='searchLable'>Date</Form.Label>  </Col>
-                            <Col> <Form.Control onInput={this.UpdateDeparture} type="text" name="date" placeholder="Enter date" /></Col>
-                            <Col> <Form.Label id='searchLable'>Adults</Form.Label>  </Col>
-                            <Col> <Form.Control onInput={this.NumberOfAdults} type="text" name="adults" placeholder="Number of adults" /></Col>
-                            <Col>  <Button type="submit">Explore!</Button></Col>
+                        <Row id='searchArea'>
+                            <Col id="labelDivLeft"><Form.Label id='searchLable'>Origin City</Form.Label>  </Col>
+                            <Col>  <Form.Control id='searchBox' onInput={this.UpdateOriginCity} type="text" name="origin" placeholder="Origin Code" /></Col>
+                            <Col id="labelDivLeft"> <Form.Label id='searchLable'>Destination City</Form.Label>  </Col>
+                            <Col>  <Form.Control id='searchBox' onInput={this.UpdateDestinationCity} type="text" name="destination" placeholder="Destination Code" /></Col>
+                            <Col id="labelDivRight"> <Form.Label id='searchLable'>Date</Form.Label>  </Col>
+                            <Col> <Form.Control id='searchBox' onInput={this.UpdateDeparture} type="text" name="date" placeholder="Date YYYY/MM/DD" /></Col>
+                            <Col id="labelDivRight"> <Form.Label id='searchLable'>Adults</Form.Label>  </Col>
+                            <Col> <Form.Control id='searchBox' onInput={this.NumberOfAdults} type="text" name="adults" placeholder="Number of adults" /></Col>
+                            <Col>  <Button id='sendItButton'type="submit">Explore!</Button></Col>
                         </Row>
                     </Form>
 

@@ -11,6 +11,8 @@
 #footer {
     position: absolute;
     bottom: 0;
+    color: blue;
+    -webkit-text-stroke: .4px gold;
 }
 
 #title{
@@ -18,7 +20,8 @@
    margin: 0 auto;
    text-align: center;
    font-family: 'Unbounded', cursive;
-   -webkit-text-stroke: 1px gold;
+   -webkit-text-stroke: 1px rgb(34, 29, 29);
+   color: gold;
    
 }
 
@@ -30,6 +33,14 @@ color: gold;
 
 #authButt{
     font-family: 'Kanit', sans-serif;  
+    color: gold;
+    -webkit-text-stroke: .2px red;
+    font-size: larger;
+  position: relative;
+  right: 1%;
+  background-color: aliceblue;
+  border-radius: 12px;
+  border-color: gold;
 }
 
 
@@ -37,20 +48,85 @@ body, html{
     background-image: url(../public/img/plane.png);
     background-repeat: no-repeat;
     background-size: cover;
+   
 }
 
 #searchLable{
-    color: black;
-    -webkit-text-stroke: .5px gold;
-font-size: ;
+    color: gold;
+    -webkit-text-stroke: .2px rgba(0, 0, 0, 0.663);
+font-size: 20px;
+text-align: right;
+/* width: 10px;
+position: relative;
+right: 110px; */
 }
 
-/* #root{
-outline-style: solid;
-border: 2px solid yellow;
-} */
+#root{
+/* outline-style: solid; */
+/* border: 2px solid yellow; */
+/* width: 100%;
+background-image: url(../public/img/airplane.png);
+background-repeat: no-repeat;
+background-size: 10%;
+background-position: 5% 10%; */
 
-.nav {
-    outline-style: solid;
-border: 2px solid yellow;
+}
+
+
+#searchArea{
+    /* background-color: red; */
+    width: 130%;
+position: relative;
+right: 13%;
+padding-top: 1.5em;
+}
+
+#searchBox{
+width: 100%;
+outline-color: rgba(255, 217, 0, 0.516);
+outline-width: .4em;
+outline-style: solid;
+font-size: 15px;
+text-align: center;
+color: black;
+-webkit-text-stroke: .3px rgba(255, 0, 0, 0.579);
+font-weight: 500;
+/* position: relative;
+right: 150px; */
+}
+
+#labelDivLeft{
+    /* background-color: purple; */
+    text-align: right;
+}
+
+#labelDivRight{
+    /* background-color: green; */
+    text-align: right;
+    position: relative;
+    right: ;
+    /* width: 100px; */
+}
+
+#headerBack{
+    background-color: rgba(0, 0, 255, 0.318);
+outline-style: solid;
+outline-color: rgba(255, 217, 0, 0.378);
+/* z-index: -1; */
+}
+
+#airplane{
+    position: relative;
+    left: 3%;
+}
+
+
+#sendItButton{
+color: gold;
+border-color: gold;
+border-width: .2em;
+font-size: large;
+position: relative;
+right: -0%;
+top: -15%;
 }
